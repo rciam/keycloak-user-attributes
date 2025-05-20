@@ -1,14 +1,11 @@
 package org.rciam.plugins.user_attributes.helpers;
 
 import jakarta.ws.rs.core.Response;
-import org.keycloak.models.AdminRoles;
 import org.keycloak.services.ErrorResponseException;
 import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator;
 
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Utils {
     private static final String USER_ATTRIBUTE_ROLES = "manage-user-attribute-";
