@@ -10,14 +10,13 @@ import org.keycloak.jose.jws.JWSInputException;
 import org.keycloak.models.ClientModel;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.RealmModel;
-import org.keycloak.models.UserModel;
 import org.keycloak.representations.AccessToken;
 import org.keycloak.services.managers.AppAuthManager;
 import org.keycloak.services.managers.AuthenticationManager;
 import org.keycloak.services.managers.RealmManager;
 import org.keycloak.services.resources.admin.AdminAuth;
-import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator;
-import org.keycloak.services.resources.admin.permissions.AdminPermissions;
+import org.keycloak.services.resources.admin.fgap.AdminPermissionEvaluator;
+import org.keycloak.services.resources.admin.fgap.AdminPermissions;
 
 public class AuthenticationHelper {
 
@@ -74,7 +73,7 @@ public class AuthenticationHelper {
     public AdminPermissionEvaluator authenticateRealmAdminRequest() {
 
         AuthenticationManager.AuthResult authResult = authenticateUserRequest();
-        AdminAuth adminAuth = new AdminAuth(realm, authResult.getToken(), authResult.getUser(), authResult.getClient());
+        AdminAuth adminAuth = new AdminAuth(realm, authResult.token(), authResult.user(), authResult.client());
         AdminPermissionEvaluator realmAuth = AdminPermissions.evaluator(session, realm, adminAuth);
         return realmAuth;
     }

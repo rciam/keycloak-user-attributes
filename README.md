@@ -6,6 +6,7 @@ A keycloak plugin to support extensions to admin User REST API
 |------------------------|------------------|
 | 1.0.0                  | 22.0.5 +         |
 | 1.1.0                  | 22.0.13-1.17     |
+| 2.0.0                  | 26.5.0           |
 
 
 ## General configuration options 
