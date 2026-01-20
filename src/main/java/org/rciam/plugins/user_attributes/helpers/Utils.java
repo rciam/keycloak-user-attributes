@@ -2,7 +2,7 @@ package org.rciam.plugins.user_attributes.helpers;
 
 import jakarta.ws.rs.core.Response;
 import org.keycloak.services.ErrorResponseException;
-import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator;
+import org.keycloak.services.resources.admin.fgap.AdminPermissionEvaluator;
 
 import java.util.List;
 import java.util.Set;

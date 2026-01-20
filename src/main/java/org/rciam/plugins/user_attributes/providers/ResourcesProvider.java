@@ -37,7 +37,7 @@ import org.keycloak.services.ErrorResponseException;
 import org.keycloak.services.resource.RealmResourceProvider;
 import jakarta.ws.rs.core.Context;
 import org.keycloak.services.resources.admin.AdminEventBuilder;
-import org.keycloak.services.resources.admin.permissions.AdminPermissionEvaluator;
+import org.keycloak.services.resources.admin.fgap.AdminPermissionEvaluator;
 import org.rciam.plugins.user_attributes.helpers.AuthenticationHelper;
 import org.rciam.plugins.user_attributes.helpers.Utils;
 import org.rciam.plugins.user_attributes.representations.UserPager;
