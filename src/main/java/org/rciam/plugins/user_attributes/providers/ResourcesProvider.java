@@ -103,7 +103,7 @@ public class ResourcesProvider implements RealmResourceProvider {
             @Parameter(description = "Maximum results size (defaults to 100)") @QueryParam("max") Integer maxResults
     ) {
         Utils.hasUserAttributesRoles(realmAuth, Stream.of(AdminRoles.ADMIN, AdminRoles.MANAGE_USERS, AdminRoles.VIEW_USERS, AdminRoles.QUERY_USERS).collect(Collectors.toList()), Stream.of(attributeKey).collect(Collectors.toSet()));
-        Map<String, String> searchAttributes =  Stream.of(new AbstractMap.SimpleEntry<>(attributeKey, "")).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+        Map<String, String> searchAttributes =  Map.of(attributeKey, "", UserModel.EXACT, "false");
         List<UserRepresentation> users = session.users().searchForUserStream(realm, searchAttributes, firstResult, maxResults).map(x -> userModelToPerunRepresenation(x, attributeKey)).collect(Collectors.toList());
         return new UserPager(users, session.users().getUsersCount(realm, searchAttributes));
     }

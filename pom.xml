@@ -3,9 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>keycloak-parent</artifactId>
         <groupId>org.keycloak</groupId>
-        <version>26.5.0</version>
+        <artifactId>keycloak-quarkus-parent</artifactId>
+        <version>26.6.3</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -18,10 +18,10 @@
     </organization>
 
     <properties>
-        <quarkus.version>3.27.0</quarkus.version>
+        <quarkus.version>3.33.2</quarkus.version>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <user-attributes-version>2.0.0</user-attributes-version>
+        <user-attributes-version>2.0.1</user-attributes-version>
     </properties>
 
   <dependencies>

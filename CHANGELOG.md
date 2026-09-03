@@ -14,6 +14,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ##  Added
 - Get users with specific user attribute value (REST API)
 
+## [2.0.0] - 2026-01-20
+
+##  Changed
+- Upgrade to Keycloak 26.5.0
+
+## [2.0.1] - 2026-09-03
+
+##  Changed
+- Upgrade to Keycloak 26.6.6
+
+## Fixed
+- Fixed issue with getting users with specific user attribute value (REST API)
+
 
 
 
